@@ -2,7 +2,11 @@ const dayText = document.querySelector('#day');
 const timeText = document.querySelector('#time');
 
 const date = new Date();
-timeText.innerText = `${date.getUTCHours()}:${date.getUTCMinutes()}:${date.getUTCSeconds()}`;
+const hours = date.getUTCHours() < 10 ? `0${date.getUTCHours()}` : date.getUTCHours();
+const minutes = date.getUTCMinutes() < 10 ? `0${date.getUTCMinutes()}` : date.getUTCMinutes();
+const seconds = date.getUTCSeconds() < 10 ? `0${date.getUTCSeconds()}` : date.getUTCSeconds();
+
+timeText.innerText = `${hours}:${minutes}:${seconds}`;
 
 const currentDay = () => {
     const day = new Date().getDay();

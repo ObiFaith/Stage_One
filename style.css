@@ -1,0 +1,11 @@
+:root{--clr-dark: #20232c; --clr-brown: #e0ae6f;}
+.clr-brown{color: var(--clr-brown); font-size: 1.7rem;}
+*::before, *, *::after{box-sizing: border-box; margin: 0; padding-top: 0;}
+body{font: 20px/1.4 'Roboto', sans-serif; background-color: var(--clr-dark); color: #fff;display: grid; place-content: center; min-height: 100vh; text-align: center;}
+img{max-width: 100%; display: block;}
+.pt-3 { padding-top: 1rem;}
+.profile{width: 23rem; height: 23rem; border-radius: 1rem; border: 2px solid var(--clr-brown)}
+
+    @media screen and (max-height: 520px) {
+    body{padding-block: 2rem;}
+}

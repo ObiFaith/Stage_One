@@ -1,7 +1,8 @@
 const dayText = document.querySelector('#day');
 const timeText = document.querySelector('#time');
 
-timeText.innerText = `${new Date().getUTCMilliseconds()} UTC ms`;
+const date = new Date();
+timeText.innerText = `${date.getUTCHours()}:${date.getUTCMinutes()}:${date.getUTCSeconds()}`;
 
 const currentDay = () => {
     const day = new Date().getDay();
